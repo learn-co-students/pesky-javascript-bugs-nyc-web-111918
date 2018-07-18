@@ -8,6 +8,10 @@ for (var i = 1; i <= 10; i++) {
   button.textContent = 'Button ' + i
   document.body.appendChild(button)
   button.style = 'ui button'
+  addHandler(button, i)
+}
+
+function addHandler(button, i) {
   button.onclick = function() {
     alert('Hello from button ' + i + '!')
   }
