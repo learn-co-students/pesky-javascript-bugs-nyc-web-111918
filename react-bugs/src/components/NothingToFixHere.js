@@ -1,11 +1,11 @@
 import React from 'react'
-import ProductionReady from 'ProductionReady'
+import ProductionReady from './ProductionReady'
 
 export default class NothingToFixHere extends React.Component {
   constructor(props) {
     super(props)
     this.state = { time: props.time }
-    this._update = this.updateTime()
+    this._update = this.updateTime
   }
   render() {
     return (
@@ -28,7 +28,7 @@ export default class NothingToFixHere extends React.Component {
       seconds: time.getSeconds()
     }
   }
-  updateTime() {
+  updateTime = () => {
     this.setState({ time: new Date(this.state.time.getTime() + 1000) })
   }
 }
